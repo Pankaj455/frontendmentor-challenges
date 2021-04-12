@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;300;400;600;700&family=Lexend+Deca&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+.bright-orange{
+    background-color: hsl(31, 77%, 52%);
+}
+.dark-cyan{
+    background-color: hsl(184, 100%, 22%);
+}
+.very-dark-cyan{
+    background-color: hsl(179, 100%, 13%);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    /* width: 800px; */
+    width: 62vw;
+    height: 43rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    overflow: hidden;
+}
+
+
+.container .card{
+    min-width: 150px;
+    position: relative;
+    padding: 40px;
+}
+
+.container .card img{
+    width: 6rem;
+    height: 4rem;
+}
+.container .card h3{
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-top: 3rem;
+    color: rgb(241, 236, 236);
+}
+
+.card .content{
+    min-width: 10rem;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400px;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin-top: 3rem;
+    color: rgb(241, 236, 236);
+}
+
+.card .learn-more{
+    position: absolute;
+    bottom: 50px;
+    padding: 10px 25px;
+    background: rgb(241, 236, 236);
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.card:nth-child(1) .learn-more a{
+    color: hsl(31, 77%, 52%);
+}
+.card:nth-child(2) .learn-more a{
+    color: hsl(184, 100%, 22%);
+}
+.card:nth-child(3) .learn-more a{
+    color: hsl(179, 100%, 13%);
+}
+
+.card .learn-more a{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400px;
+    text-decoration: none;
+}
+
+.card .learn-more:hover{
+    border: 1.5px solid rgb(241, 236, 236);
+    background: transparent;
+}
+.card .learn-more:hover a{
+    color: rgb(241, 236, 236);
+}
+
+@media (max-width: 1020px){
+    html{
+        font-size: 9px;
+    }
+}
+@media (max-width: 974px){
+    html{
+        font-size: 8px;
+    }
+}
+@media (max-width: 874px){
+    html{
+        font-size: 6px;
+    }
+    .container{
+        border-radius: 10px;
+        margin-top: 5rem;
+        max-width: 400px;
+        height: auto;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+        place-items: center;
+        overflow: hidden;
+    }
+    .container .card{
+        height: 300px;
+        position: relative;
+        padding: 40px 40px;
+    }
+
+    .container .card h3{
+        font-size: 5rem;
+    }
+
+    .card .logo img{
+        width: 6rem;
+        height: 4rem;
+    }
+    .card .content{
+        max-width: 55rem;
+        font-size: 1.3rem;
+        margin-top: 2.6rem; 
+    }
+    
+}
